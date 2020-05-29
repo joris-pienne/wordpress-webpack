@@ -159,10 +159,10 @@
 
         <div class="project-box">
           <div class="more-projects">
-            <a href="/projets">Voir plus de projets</a>
+            <a href="{{get_permalink( get_page_by_title( 'projets' ))}}">Voir plus de projets</a>
             <img src="@asset('images/arrows/arrow-more-projects.png')" alt="fleche-plus-de-projets">
           </div>
- 
+
           <div class="projects">
             <div class="project">
               <img class="project" src="" alt="projet">

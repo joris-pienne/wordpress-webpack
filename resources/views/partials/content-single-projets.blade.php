@@ -11,7 +11,7 @@
 
 
   <div class="return">
-    <a href="/projets">Page projets</a>
+    <a href="{{get_permalink( get_page_by_title( 'projets' ))}}">Page projets</a>
     <img src="@asset('images/arrows/arrow-view-project.png')" alt="fleche-retour">
   </div>
 

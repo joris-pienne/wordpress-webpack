@@ -13,7 +13,7 @@
 
 
     <div class="return">
-      <a href="/">Page principale</a>
+      <a href="{{get_permalink( get_page_by_title( 'home page' ))}}">Page principale</a>
       <img src="@asset('images/arrows/arrow-view-project.png')" alt="fleche-retour">
     </div>
 
