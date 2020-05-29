@@ -1,0 +1,37 @@
+section
+{
+  div.wrap
+  {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2
+    {
+      font-family: 'Coolvetica', sans-serif;
+      font-size: 40px;
+      color: $primary;
+    }
+
+    h2::after
+    {
+      display: block;
+      content: '';
+      height: 4px;
+      width: 140px;
+      background-color: $primary;
+      margin-left: 50px;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 10px;
+    }
+  }
+}
+
+section:not(:first-of-type)
+{
+  position: relative;
+  z-index: 1;
+}

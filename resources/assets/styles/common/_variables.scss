@@ -1,0 +1,13 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+
+$primary: #1A2129;
+$secondary: #fff;
+$tertiary: #f7f7f7;
+$specifics: #2ecc71;
+
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

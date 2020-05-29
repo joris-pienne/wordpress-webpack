@@ -1,0 +1,177 @@
+body.archive
+{
+
+  div.header
+  {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+    background-color: $primary;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 56%, 0% 100%);
+
+    h1
+    {
+      font-family: 'Coolvetica', sans-serif;
+      font-size: 30px;
+      color: $secondary;
+      margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+
+    h1::after
+    {
+      display: block;
+      content: '';
+      height: 4px;
+      width: 140px;
+      background-color: $secondary;
+      margin-left: 50px;
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 10px;
+    }
+
+    img.triangle
+    {
+      height: 110px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    div.return
+    {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 25px;
+      right: 25px;
+
+      a
+      {
+        color: $secondary;
+        font-family: 'ff-tisa-sans-web-pro', sans-serif;
+        text-decoration: none;
+      }
+
+      img
+      {
+        width: auto;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  section
+  {
+    margin-top: 240px;
+
+    div.wrap
+    {
+      div.projects
+      {
+        display: grid;
+        grid-template-columns: repeat(4, 275px);
+        grid-template-rows: repeat(2, 275px);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 100%;
+
+        div.project
+        {
+          margin: auto;
+          height: 275px;
+          width: 275px;
+          position: relative;
+          overflow: hidden;
+
+          div.imgDisplayed
+          {
+            width: 100%;
+            height: 100%;
+          }
+
+          div.overlay
+          {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $primary;
+            transition: all 0.2s ease;
+            transform: translateY(100%);
+
+            div.little-wrap
+            {
+              margin-top: auto;
+              margin-bottom: auto;
+              text-align: center;
+
+              p:first-of-type
+              {
+                font-family: 'Coolvetica', sans-serif;
+                font-size: 20px;
+                margin-bottom: 20px;
+              }
+
+              p
+              {
+                font-family: 'ff-tisa-sans-web-pro', sans-serif;
+                font-size: 15px;
+                margin-bottom: 10px;
+                color: $secondary;
+              }
+
+              p:last-of-type
+              {
+                margin-bottom: 20px;
+              }
+
+              div.view-project
+              {
+                display: flex;
+                flex-direction: column;
+                width: 82px;
+                margin: auto;
+
+                a
+                {
+                  text-decoration: none;
+                  color: $secondary;
+                  font-family: 'ff-tisa-sans-web-pro', sans-serif;
+                  font-size: 12px;
+                  letter-spacing: 1px;
+                }
+
+                img
+                {
+                  margin-top: 5px;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        div.project:hover
+        {
+          div.overlay
+          {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}

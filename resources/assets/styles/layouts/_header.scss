@@ -1,0 +1,189 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+body:not(.home) header.banner
+{
+  display: none;
+}
+
+body.home header.banner div.container
+{
+  max-width: 100%;
+  padding: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+
+  div.menu
+  {
+    display: flex;
+    padding: 40px;
+
+    div.left-side
+    {
+      display: flex;
+
+      a
+      {
+        height: 44px;
+
+        img
+        {
+          height: 100%;
+        }
+
+        &:last-of-type
+        {
+          display: none;
+        }
+      }
+
+      p
+      {
+        font-size: 18px;
+        font-family: 'ff-tisa-sans-web-pro', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: $secondary;
+        margin: auto 12px auto 0; //haut gauche bas droite
+        width: 100px;
+      }
+    }
+
+    div.left-side.active
+    {
+      a
+      {
+        display: none;
+
+        &:last-of-type
+        {
+          display: block;
+        }
+      }
+
+      p
+      {
+        color: $primary;
+      }
+    }
+
+    div.right-side
+    {
+      display: flex;
+      margin-left: auto;
+
+      div:not(:last-of-type)
+      {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: relative;
+
+        &:first-of-type
+        {
+          margin-right: 30px;
+        }
+
+        &:nth-of-type(2)
+        {
+          margin-right: 75px;
+        }
+
+        a
+        {
+          height: 31px;
+
+          img
+          {
+            height: 100%;
+          }
+
+          &:last-of-type
+          {
+            display: none;
+          }
+        }
+      }
+
+      div.hamburger
+      {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        &:hover
+        {
+
+          span
+          {
+            &:first-of-type
+            {
+              margin-left: 5px;
+
+            }
+
+            &:last-of-type
+            {
+              margin-left: 10px;
+
+            }
+          }
+        }
+
+        span
+        {
+          display: block;
+          content: '';
+          background-color: $secondary;
+          height: 2px;
+          width: 30px;
+          border-radius: 50px;
+          transition: all 0.3s ease;
+
+          &:first-of-type
+          {
+            width: 15px;
+            margin: auto 0 9px 10px; //haut gauche bas droite
+          }
+
+          &:last-of-type
+          {
+            width: 15px;
+            margin: 9px 0 auto 5px; //haut gauche bas droite
+          }
+        }
+      }
+    }
+
+    div.right-side.active
+    {
+      div
+      {
+        a
+        {
+          display: none;
+
+          &:last-of-type
+          {
+            display: block;
+          }
+        }
+      }
+
+      div.hamburger
+      {
+        span
+        {
+          background-color: $primary;
+
+        }
+      }
+    }
+  }
+}
